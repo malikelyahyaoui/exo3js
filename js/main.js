@@ -1,16 +1,24 @@
-// Prendre tout les carrés
+// prendre tout les carrés
 const square = document.querySelectorAll('.carre');
 
-// Boucle pour chaque carré
+// boucle pour chaque carré
+// square.forEach(square => {
+//     square.addEventListener('click', () => {
+//         // vérifie si l'élement a bien la classe "modifie"
+//         if (square.classList.contains('modifie')) {
+//             // supprimer la classe "modifie" de l'élément square
+//             square.classList.remove('modifie');
+//         } else {
+//             // si la classe "modifie" n'est pas présente, on l'ajoute
+//             square.classList.add('modifie');
+//         }
+//     });
+// });
+
 square.forEach(square => {
     square.addEventListener('click', () => {
-        // au clique le carré se modifie
-        if (square.classList.contains('modifie')) {
-            // au 2eme clique il revient à son état initiale
-            square.classList.remove('modifie');
-        } else {
-            // si le carré n'a pas les modifs css on lui ajoute
-            square.classList.add('modifie');
-        }
+      square.classList.toggle('modifie');
     });
-});
+  });
+
+
